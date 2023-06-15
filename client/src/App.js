@@ -10,12 +10,14 @@ import BlogMain from './pages/BlogMain';
 import BlogPage from './pages/BlogPage';
 import MainLogin from './pages/MainLogin';
 import MainRegister from './pages/MainRegister';
-import PlaceDetalis from './pages/PlaceDetalis';
+import RestaurantDetailPage from './pages/RestaurantDetailPage';
+import CafeDetailPage from './pages/CafeDetailPage';
+import PubDetailPage from './pages/PubDetailPage';
+import CinemaDetailPage from './pages/CinemaDetailPage';
 import CheckoutPage from './pages/CheckoutPage';
 import BlogListPage from './pages/BlogListPage';
 import BlogEditPage from './pages/BlogEditPage';
 import BusListPage from './pages/BusListPage';
-import BusEditPage from './pages/BusEditPage';
 import RestaurantListPage from './pages/RestaurantListPage';
 import CinemaListPage from './pages/CinemaListPage';
 import CafeListPage from './pages/CafeListPage';
@@ -26,11 +28,15 @@ import RestaurantAddPage from './pages/RestaurantAddPage';
 import CinemaAddPage from './pages/CinemaAddPage';
 import CafeAddPage from './pages/CafeAddPage';
 import EventDetail from './pages/EventDetail';
-import AllLocations from './pages/AllLocations'
 import PasswordReset from './pages/PasswordReset';
 import Panel from './pages/Panel';
 import BlogAddPage from './pages/BlogAddPage';
 import BusAddPage from './pages/BusAddPage';
+import CafeAllPage from './pages/CafeAllPage';
+import RestaurantALLPage from './pages/RestaurantALLPage';
+import CinemaALLPage from './pages/CinemaAllPage';
+import PubAllPage from './pages/PubAllPage';
+
 import TransportationDetailPage from './pages/TransportationDetailPage';
 
 function App() {
@@ -96,6 +102,12 @@ function App() {
       .then(response => response.json())
       .then(data => setCinemas(data));
   }, []);
+  const [pubs, setPub] = useState([]);
+  useEffect(() => {
+    fetch('/api/pubs')
+      .then(response => response.json())
+      .then(data => setCinemas(data));
+  }, []);
 
 
 
@@ -111,9 +123,7 @@ function App() {
         <Route path="/locations" element={<Locations />} /> 
         <Route path="/login" element={<MainLogin />} /> 
         <Route path="/register" element={<MainRegister />} /> 
-        <Route path="/place_detail" element={<PlaceDetalis />} /> 
         <Route path="/checkout" element={<CheckoutPage />} />
-        <Route path="/all-locations" element={<AllLocations />} />
         <Route path="/reset-password" element={<PasswordReset />} />
         <Route path="/blog-add" element={<BlogAddPage />} />
         <Route path="/blog-list" element={<BlogListPage />} />
@@ -127,9 +137,24 @@ function App() {
         <Route path="/restaurant-add" element={<RestaurantAddPage />} />
         <Route path="/restaurant-list" element={<RestaurantListPage />} />
         <Route path="/bus-detail" element={<TransportationDetailPage />} />
+        <Route path="/all-cafe" element={<CafeAllPage />} />
+        <Route path="/all-restaurant" element={<RestaurantALLPage />} />
+        <Route path="/all-cinemas" element={<CinemaALLPage />} />
+          <Route path="/all-pubs" element={<PubAllPage />} />
         <Route path="/panel" element={<Panel />} />
         {blogs.map((blog) =>
         <Route path={`/blog/${blog._id}`} element={<BlogPage id={blog._id} />} />)}
+
+{restaurants.map((restaurant) =>
+        <Route path={`/restaurant/${restaurant._id}`} element={<RestaurantDetailPage id={restaurant._id} />} />)}
+         {pubs.map((pub) =>
+        <Route path={`/pub/${pub._id}`} element={<PubDetailPage id={pub._id} />} />)}
+        {cafes.map((cafe) =>
+        <Route path={`/cafe/${cafe._id}`} element={<RestaurantDetailPage id={cafe._id} />} />)}
+        {cinemas.map((cinema) =>
+        <Route path={`/cinema/${cinema._id}`} element={<CinemaDetailPage id={cinema._id} />} />)}
+     
+
            {transportations.map((transportation) =>
         <Route path={`/transportation/${transportation._id}`} element={<TransportationDetailPage id={transportation._id} />} />)}
 

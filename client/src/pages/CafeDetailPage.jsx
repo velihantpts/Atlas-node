@@ -5,19 +5,19 @@ import FooterComponent from '../components/FooterComponent'
 import axios from 'axios';
 const PlaceDetalis = ({ id }) => {
     
-  const [restaurants, setRestaurant] = useState(null);
+  const [cafes, setCafe] = useState(null);
   useEffect(() => {
     axios
-      .get(`/api/restaurant/${id}`)
+      .get(`/api/cafe/${id}`)
       .then((response) => {
-        setRestaurant(response.data);
+        setCafe(response.data);
       })
       .catch((error) => {
         console.error('Error:', error);
       });
   }, [id])
 
-  if (!restaurants) {
+  if (!cafes) {
     return <div>Loading...</div>;
   }
 
@@ -46,7 +46,7 @@ const PlaceDetalis = ({ id }) => {
         </li>
 
         <li class="text-sm">
-          <a href="#" aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">{restaurants.title}</a>
+          <a href="#" aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">{cafes.title}</a>
         </li>
       </ol>
     </nav>
@@ -54,7 +54,7 @@ const PlaceDetalis = ({ id }) => {
 
     <div class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
       <div class="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
-        <img src={restaurants.cardImage} alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center"/>
+        <img src={cafes.cardImage} alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center"/>
       </div>
       <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
         <div class="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
@@ -75,7 +75,7 @@ const PlaceDetalis = ({ id }) => {
 
     <div class="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
       <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-        <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{restaurants.title}</h1>
+        <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{cafes.title}</h1>
       </div>
 
 

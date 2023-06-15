@@ -1,6 +1,6 @@
 import React from 'react';
-
-const LocationCard = ({ title, cardImage, cardDescription }) => {
+import { Link } from 'react-router-dom';
+const LocationCard = ({ title, cardImage, cardDescription,linkUrl }) => {
   return (
     <div>
       <div className="flex flex-col justify-center items-center cursor-pointer">
@@ -45,9 +45,9 @@ const LocationCard = ({ title, cardImage, cardDescription }) => {
                   {cardDescription}
                 </p>
                 <div className="text-start">
-                  <a className="mt-1 text-sm font-medium md:mt-2 flex-end">
-                    Detay
-                  </a>
+                <Link to={linkUrl} className='inline-block text-blue-500 underline hover:text-blue-400'>
+  Daha fazlası  
+</Link>
                 </div>
               </div>
             </div>

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import CustomNavbar from '../components/CustomNavbar'
 import FooterComponent from '../components/FooterComponent'
 import axios from 'axios';
-const PlaceDetalis = ({ id }) => {
+const RetaurantDetailPage = ({ id }) => {
     
   const [restaurants, setRestaurant] = useState(null);
   useEffect(() => {
@@ -232,4 +232,4 @@ const PlaceDetalis = ({ id }) => {
   )
 }
 
-export default PlaceDetalis
+export default RetaurantDetailPage

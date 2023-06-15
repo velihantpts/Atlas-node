@@ -27,14 +27,14 @@ const PlacesInnerCinemaComponent = () => {
             title={cinema.title}
             cardDescription={cinema.cardDescription}
             cardImage={cinema.cardImage} 
-           // linkUrl={`/blog/${location._id}`}
+           linkUrl={`/cinema/${cinema._id}`}
           />
         ))} 
        </div>
        
        <div className='w-full flex justify-center'>
        <Button variant="gradient"  className="rounded-md bg-gradient-to-r from-sky-500 to-blue-500 mb-6">
-       <a href="/all-locations" class="inline-block w-full h-full">
+       <a href="/all-cinemas" class="inline-block w-full h-full">
         Daha fazlası için tıklayınız
     </a>
         </Button>

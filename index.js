@@ -41,7 +41,7 @@ mongoose.connect('mongodb+srv://admin:nv12345.@atlas.lbelsjf.mongodb.net/test', 
     title: String,
     cardImage: String,
     cardDescription: String,
-  },'cinemas');
+  },);
   
 
 const Pubs = mongoose.model('Pubs', {
@@ -53,7 +53,7 @@ const Cafes = mongoose.model('Cafes', {
   title: String,
   cardImage: String,
   cardDescription: String,
-}, 'cafes');
+}, );
 
 
 // Event
@@ -249,6 +249,89 @@ app.get('/api/blogs/:id', async (req, res) => {
 });
 
 
+app.get('/api/restaurant/:id', async (req, res) => {
+  const id = req.params.id;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    res.status(400).send({ error: 'Invalid restaurant ID.' });
+    return;
+  }
+
+  try {
+    const restaurant = await Restaurants.findById(id);
+    if (!restaurant) {
+      res.status(404).send({ error: 'restaurant not found.' });
+      return;
+    }
+    res.send(restaurant);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({ error: 'An error occurred while querying the database.' });
+  }
+});
+
+app.get('/api/cafe/:id', async (req, res) => {
+  const id = req.params.id;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    res.status(400).send({ error: 'Invalid cafe ID.' });
+    return;
+  }
+
+  try {
+    const cafe = await Cafes.findById(id);
+    if (!cafe) {
+      res.status(404).send({ error: 'cafe not found.' });
+      return;
+    }
+    res.send(cafe);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({ error: 'An error occurred while querying the database.' });
+  }
+});
+app.get('/api/pub/:id', async (req, res) => {
+  const id = req.params.id;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    res.status(400).send({ error: 'Invalid pub ID.' });
+    return;
+  }
+
+  try {
+    const pub = await Pubs.findById(id);
+    if (!pub) {
+      res.status(404).send({ error: 'pub not found.' });
+      return;
+    }
+    res.send(pub);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({ error: 'An error occurred while querying the database.' });
+  }
+});
+
+app.get('/api/cinema/:id', async (req, res) => {
+  const id = req.params.id;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    res.status(400).send({ error: 'Invalid cinema ID.' });
+    return;
+  }
+
+  try {
+    const cinema = await Cinemas.findById(id);
+    if (!pub) {
+      res.status(404).send({ error: 'cinema not found.' });
+      return;
+    }
+    res.send(cinema);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({ error: 'An error occurred while querying the database.' });
+  }
+});
+
 
 
 
@@ -281,6 +364,15 @@ app.get('/api/cafes', async (req, res) => {
   try {
     const cafes = await Cafes.find();
     res.json(cafes);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Sunucu hatası');
+  }
+});
+app.get('/api/pubs', async (req, res) => {
+  try {
+    const pubs = await Pubs.find();
+    res.json(pubs);
   } catch (err) {
     console.error(err);
     res.status(500).send('Sunucu hatası');

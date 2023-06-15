@@ -7,7 +7,7 @@ const AllLocations = () => {
   const [locations, setLocations] = useState([]);
 
   useEffect(() => {
-    fetch('/api/locations')
+    fetch('/api/cinemas')
       .then(response => response.json())
       .then(data => setLocations(data));
   }, []);
