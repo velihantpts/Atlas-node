@@ -52,7 +52,7 @@ function RestaurantAddPage() {
       }
     } catch (error) {
       console.log('Try\'a girmedi');
-    }
+    }// fgfdsd
   };
     return (
         <div className='ml-64 p-5 px-10'>
