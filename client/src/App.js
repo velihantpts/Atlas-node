@@ -137,8 +137,8 @@ function App() {
         <Route path="/restaurant-add" element={<RestaurantAddPage />} />
         <Route path="/restaurant-list" element={<RestaurantListPage />} />
         <Route path="/bus-detail" element={<TransportationDetailPage />} />
-        <Route path="/all-cafe" element={<CafeAllPage />} />
-        <Route path="/all-restaurant" element={<RestaurantALLPage />} />
+        <Route path="/all-cafes" element={<CafeAllPage />} />
+        <Route path="/all-restaurants" element={<RestaurantALLPage />} />
         <Route path="/all-cinemas" element={<CinemaALLPage />} />
           <Route path="/all-pubs" element={<PubAllPage />} />
         <Route path="/panel" element={<Panel />} />
