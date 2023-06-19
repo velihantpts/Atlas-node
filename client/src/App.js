@@ -33,9 +33,14 @@ import Panel from './pages/Panel';
 import BlogAddPage from './pages/BlogAddPage';
 import BusAddPage from './pages/BusAddPage';
 import CafeAllPage from './pages/CafeAllPage';
-import RestaurantALLPage from './pages/RestaurantALLPage';
+import RestaurantALLPage from './pages/RestaurantAllPage2';
 import CinemaALLPage from './pages/CinemaAllPage';
 import PubAllPage from './pages/PubAllPage';
+import UserPanel from './pages/UserPanel';
+import UserAddMenu from './pages/UserAddMenu';
+import UserAddBusiness from './pages/UserAddBusiness';
+import UserCreateDesign from './pages/UserCreateDesign';
+import Gecici from './pages/Gecici';
 
 import TransportationDetailPage from './pages/TransportationDetailPage';
 
@@ -140,7 +145,19 @@ function App() {
         <Route path="/all-cafes" element={<CafeAllPage />} />
         <Route path="/all-restaurants" element={<RestaurantALLPage />} />
         <Route path="/all-cinemas" element={<CinemaALLPage />} />
-          <Route path="/all-pubs" element={<PubAllPage />} />
+        <Route path="/all-pubs" element={<PubAllPage />} />
+        <Route path="/user-panel" element={<UserPanel />} />
+        <Route path="/add-menu" element={<UserAddMenu />} />
+        <Route path="/add-business" element={<UserAddBusiness />} />
+        <Route path="/create-design" element={<UserCreateDesign />} />
+        <Route path="/gecici" element={<Gecici />} />
+
+
+
+
+
+
+          {/* İd işlemleri */}
         <Route path="/panel" element={<Panel />} />
         {blogs.map((blog) =>
         <Route path={`/blog/${blog._id}`} element={<BlogPage id={blog._id} />} />)}
