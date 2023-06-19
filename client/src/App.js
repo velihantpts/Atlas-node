@@ -144,8 +144,7 @@ function App() {
         <Route path="/panel" element={<Panel />} />
         {blogs.map((blog) =>
         <Route path={`/blog/${blog._id}`} element={<BlogPage id={blog._id} />} />)}
-
-{restaurants.map((restaurant) =>
+        {restaurants.map((restaurant) =>
         <Route path={`/restaurant/${restaurant._id}`} element={<RestaurantDetailPage id={restaurant._id} />} />)}
          {pubs.map((pub) =>
         <Route path={`/pub/${pub._id}`} element={<PubDetailPage id={pub._id} />} />)}
@@ -153,21 +152,14 @@ function App() {
         <Route path={`/cafe/${cafe._id}`} element={<RestaurantDetailPage id={cafe._id} />} />)}
         {cinemas.map((cinema) =>
         <Route path={`/cinema/${cinema._id}`} element={<CinemaDetailPage id={cinema._id} />} />)}
-     
-
-           {transportations.map((transportation) =>
+        {transportations.map((transportation) =>
         <Route path={`/transportation/${transportation._id}`} element={<TransportationDetailPage id={transportation._id} />} />)}
-
-
             {blogs.map((blog) =>
         <Route path={`/blog/edit/${blog._id}`} element={<BlogEditPage id={blog._id} />} />)}
             {bus.map((bus) =>
         <Route path={`/bus/edit/${bus._id}`} element={<BlogEditPage id={bus._id} />} />)}
          {events.map((event) =>
         <Route path={`/event/${event._id}`} element={<EventDetail id={event._id} />} />)}
-
-   
-
          {cinemas.map((cinema) =>
         <Route path={`/cinema/edit/${cinema._id}`} element={<CinemaEditPage id={cinema._id} />} />)}
           {cafes.map((cafe) =>
