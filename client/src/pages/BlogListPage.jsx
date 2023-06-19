@@ -18,7 +18,7 @@ function BlogListPage() {
 
 
   const handleDelete = (blogId) => {
-    fetch(`/api/blog/${blogId}`, { method: 'DELETE' })
+    fetch(`/api/blogs/${blogId}`, { method: 'DELETE' })
       .then(response => {
         if (response.ok) {
           // Silme işlemi başarılı

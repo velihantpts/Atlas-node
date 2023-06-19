@@ -269,7 +269,36 @@ app.get('/api/restaurant/:id', async (req, res) => {
     res.status(500).send({ error: 'An error occurred while querying the database.' });
   }
 });
-
+app.delete('/api/restaurant/:id', async (req, res) => {
+  try {
+    const restaurantId = req.params.id;
+    await Restaurants.findByIdAndRemove(restaurantId);
+    res.sendStatus(204);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Sunucu hatası');
+  }
+});
+app.delete('/api/cinema/:id', async (req, res) => {
+  try {
+    const cinemaId = req.params.id;
+    await Cinemas.findByIdAndRemove(cinemaId);
+    res.sendStatus(204);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Sunucu hatası');
+  }
+});
+app.delete('/api/pub/:id', async (req, res) => {
+  try {
+    const pubId = req.params.id;
+    await Pubs.findByIdAndRemove(pubId);
+    res.sendStatus(204);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Sunucu hatası');
+  }
+});
 app.get('/api/cafe/:id', async (req, res) => {
   const id = req.params.id;
 
@@ -387,9 +416,6 @@ app.get('/api/restaurants', async (req, res) => {
     res.status(500).send('Sunucu hatası');
   }
 });
-
-
-// Tüm hatları getiren Get istegi
 app.get('/api/transportations', async (req, res) => {
   try {
     const transportations = await Transportation.find();
@@ -530,7 +556,16 @@ app.put('/api/bus/:id', async (req, res) => {
 
 // Mekan edit ve silme
 
-
+app.delete('/api/cafe/:id', async (req, res) => {
+  try {
+    const cafeId = req.params.id;
+    await Cafe.findByIdAndRemove(cafeId);
+    res.sendStatus(204);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Sunucu hatası');
+  }
+});
 
 // Mekan silme endpoint'i
 app.delete('/api/mekan/:id', async (req, res) => {
