@@ -1,4 +1,5 @@
 import React from 'react'
+import background from './bg.png'
 
 function EventHeader() {
     return (
@@ -18,11 +19,8 @@ function EventHeader() {
          
           </div>
           <div className="flex items-center justify-center lg:w-1/2">
-            <div className="w-2/5">
-              <img className="object-cover" src="https://kitwind.io/assets/kometa/one-girl-phone.png" alt="" />
-            </div>
-            <div className="w-5/12 -ml-16 lg:-ml-32">
-              <img className="object-cover" src="https://kitwind.io/assets/kometa/two-girls-phone.png" alt="" />
+            <div className="w-3/5">
+              <img className="object-cover rounded-md" src={background} alt="" />
             </div>
           </div>
         </div>

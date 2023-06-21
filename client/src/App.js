@@ -40,6 +40,7 @@ import UserPanel from './pages/UserPanel';
 import UserAddMenu from './pages/UserAddMenu';
 import UserAddBusiness from './pages/UserAddBusiness';
 import UserCreateDesign from './pages/UserCreateDesign';
+import MenuPage from './pages/Menu';
 import Gecici from './pages/Gecici';
 
 import TransportationDetailPage from './pages/TransportationDetailPage';
@@ -151,6 +152,8 @@ function App() {
         <Route path="/add-business" element={<UserAddBusiness />} />
         <Route path="/create-design" element={<UserCreateDesign />} />
         <Route path="/gecici" element={<Gecici />} />
+        <Route path="/menu-page" element={<MenuPage />} />
+
 
 
 

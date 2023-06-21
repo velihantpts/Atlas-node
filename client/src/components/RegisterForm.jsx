@@ -52,7 +52,7 @@ function RegisterForm() {
           <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
-                Create an account
+                Hesap oluştur
               </h1>
               <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
                 <div className="flex flex-row justify-between">
@@ -73,7 +73,7 @@ function RegisterForm() {
                   </div>
                   <div>
                     <label htmlFor="lastName" className="block mb-2 text-sm font-medium text-gray-900">
-                      Soyadı
+                      Soyisim
                     </label>
                     <input
                       type="text"
@@ -90,14 +90,14 @@ function RegisterForm() {
 
                 <div>
                   <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">
-                    Your email
+                    Mail adresiniz
                   </label>
                   <input
                     type="email"
                     name="email"
                     id="email"
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                    placeholder="name@company.com"
+                    placeholder="isim@company.com"
                     required
                     value={formData.email}
                     onChange={handleChange}
@@ -105,14 +105,14 @@ function RegisterForm() {
                 </div>
                 <div>
                   <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">
-                    Password
+                    Şifre
                   </label>
                   <input
                     type="password"
                     name="password"
                     id="password"
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                    placeholder="Password"
+                    placeholder="*****"
                     required
                     value={formData.password}
                     onChange={handleChange}
@@ -120,14 +120,14 @@ function RegisterForm() {
                 </div>
                 <div>
                   <label htmlFor="confirmPassword" className="block mb-2 text-sm font-medium text-gray-900">
-                    Confirm Password
+                    Şifre tekrarı
                   </label>
                   <input
                     type="password"
                     name="confirmPassword"
                     id="confirmPassword"
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                    placeholder="Confirm Password"
+                    placeholder="*****"
                     required
                     value={formData.confirmPassword}
                     onChange={handleChange}
@@ -136,9 +136,9 @@ function RegisterForm() {
                 <div>
                   <button
                     type="submit"
-                    className="w-full px-4 py-2 text-base font-medium bg-primary-600 rounded-lg shadow-md hover:bg-primary-700"
+                    className="text-white w-full px-4 py-2 text-base font-medium bg-sky-500 rounded-lg shadow-md hover:bg-primary-700"
                   >
-                    Register
+                    Kayıt ol
                   </button>
                 </div>
               </form>

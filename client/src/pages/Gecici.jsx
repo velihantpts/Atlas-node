@@ -4,35 +4,35 @@ import CustomNavbar from '../components/CustomNavbar';
 
 function Gecici() {
 
-    // 
+    
     const navigate = useNavigate();
     const [state, setState] = useState(false)
-    // 
+     
 
     const faqsList = [
         {
-            q: "What are some random questions to ask?",
-            a: "That's exactly the reason we created this random question generator. There are hundreds of random questions to choose from so you're able to find the perfect random question.",
+            q: "Mekanınız için sıkca sorulan soru  #1",
+            a: "İlgili sorunun cevabı",
             href: "javascript:void(0)",
         },
         {
-            q: "Do you include common questions?",
-            a: "This generator doesn't include most common questions. The thought is that you can come up with common questions on your own so most of the questions in this generator.",
+            q: "Mekanınız için sıkca sorulan soru  #2",
+            a: "İlgili sorunun cevabı",
             href: "javascript:void(0)",
         },
         {
-            q: "Can I use this for 21 questions?",
-            a: "Yes! there are two ways that you can use this question generator depending on what you're after. You can indicate that you want 21 questions generated.",
+            q: "Mekanınız için sıkca sorulan soru  #3",
+            a: "İlgili sorunun cevabı",
             href: "javascript:void(0)",
         },
         {
-            q: "Are these questions for girls or for boys?",
-            a: "The questions in this generator are gender neutral and can be used to ask either male of females (or any other gender the person identifies with).",
+            q: "Mekanınız için sıkca sorulan soru  #4",
+            a: "İlgili sorunun cevabı",
             href: "javascript:void(0)",
         },
         {
-            q: "What do you wish you had more talent doing?",
-            a: "If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires.",
+            q: "Mekanınız için sıkca sorulan soru  #5",
+            a: "İlgili sorunun cevabı",
             href: "javascript:void(0)",
         }
     ]
@@ -79,20 +79,20 @@ function Gecici() {
                     <div className="max-w-screen-xl mx-auto px-4 py-28 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex">
                         <div className='flex-none space-y-5 max-w-xl'>
                             <h1 className="text-4xl text-gray-800 font-extrabold sm:text-5xl">
-                                Build your SaaS exactly how you want
+                                Mekanınız için başlık giriniz
                             </h1>
                             <p>
-                                Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+                                Mekanınızla ilgili kısa bilgilendirme yazısı giriniz
                             </p>
                             <div className='flex items-center gap-x-3 sm:text-sm'>
                                 <a href="javascript:void(0)" className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex">
-                                    Get started
+                                    Buton#1
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                                         <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
                                     </svg>
                                 </a>
                                 <a href="javascript:void(0)" className="flex items-center justify-center gap-x-1 py-2 px-4 text-gray-700 hover:text-gray-900 font-medium duration-150 md:inline-flex">
-                                    Contact sales
+                                    Buton#2
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                                         <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
                                     </svg>
@@ -110,27 +110,145 @@ function Gecici() {
            
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-10">
     <div class="grid gap-4">
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://dr.savee-cdn.com/things/6/4/8b79ca32bba0f0873b0323.webp" alt=""/>
+    <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-72 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+            <svg aria-hidden="true" class="w-10 h-10 mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
         </div>
+        <input id="dropzone-file" type="file" class="hidden" />
+    </label>
     </div>
     <div class="grid gap-4">
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://dr.savee-cdn.com/things/6/4/8ca4d6289af0a338dd1cf5.webp" alt=""/>
+    <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-72 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+            <svg aria-hidden="true" class="w-10 h-10 mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
         </div>
+        <input id="dropzone-file" type="file" class="hidden" />
+    </label>
 
     </div>
     <div class="grid gap-4">
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://dr.savee-cdn.com/things/6/4/8dbbc276c3a306e61e9b5b.webp" alt=""/>
+    <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-72 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+            <svg aria-hidden="true" class="w-10 h-10 mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
         </div>
+        <input id="dropzone-file" type="file" class="hidden" />
+    </label>
     </div>
     <div class="grid gap-4">
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://dr.savee-cdn.com/things/6/4/8dbbd385c6e5074ba09c2c.webp" alt=""/>
+    <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-72 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+            <svg aria-hidden="true" class="w-10 h-10 mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
         </div>
+        <input id="dropzone-file" type="file" class="hidden" />
+    </label>
 
     </div>
+</div>
+<div>
+<section class="bg-white">
+  <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
+        İşletmeniz ile ilgili verileri girin
+      </h2>
+
+      <p class="mt-4 text-gray-500 sm:text-xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolores
+        laborum labore provident impedit esse recusandae facere libero harum
+        sequi.
+      </p>
+    </div>
+
+    <div class="mt-8 sm:mt-12">
+      <dl class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div class="flex flex-col rounded-lg bg-blue-100 px-4 py-8 text-center">
+          <dt class="order-last text-lg font-medium text-gray-500">
+            Veri#1
+      
+          </dt>
+
+          <dd class="text-4xl font-extrabold text-blue-600 md:text-5xl">
+            Deger#1
+          </dd>
+          <br/>
+        </div>
+
+        <div class="flex flex-col rounded-lg bg-blue-100 px-4 py-8 text-center">
+          <dt class="order-last text-lg font-medium text-gray-500">
+          <br/>
+          Veri#2
+          </dt>
+
+          <dd class="text-4xl font-extrabold text-blue-600 md:text-5xl"> Deger#2</dd>
+        </div>
+
+        <div class="flex flex-col rounded-lg bg-blue-100 px-4 py-8 text-center">
+          <dt class="order-last text-lg font-medium text-gray-500">
+        
+          Veri#3
+          </dt>
+
+          <dd class="text-4xl font-extrabold text-blue-600 md:text-5xl"> Deger#3</dd>
+          <br/>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+<div>
+<section>
+  <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+    <div class="max-w-3xl">
+      <h2 class="text-3xl font-bold sm:text-4xl">
+        İşletmeniz hakkında kısmı
+      </h2>
+    </div>
+
+    <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+      <div class="relative h-64 overflow-hidden sm:h-80 lg:h-full">
+      <div class="flex items-center justify-center w-full">
+    <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-72 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+            <svg aria-hidden="true" class="w-10 h-10 mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+        </div>
+        <input id="dropzone-file" type="file" class="hidden" />
+    </label>
+</div> 
+      </div>
+
+      <div class="lg:py-16">
+        <article class="space-y-4 text-gray-600">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut qui
+            hic atque tenetur quis eius quos ea neque sunt, accusantium soluta
+            minus veniam tempora deserunt? Molestiae eius quidem quam repellat.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum
+            explicabo quidem voluptatum voluptas illo accusantium ipsam quis,
+            vel mollitia? Vel provident culpa dignissimos possimus, perferendis
+            consectetur odit accusantium dolorem amet voluptates aliquid,
+            ducimus tempore incidunt quas. Veritatis molestias tempora
+            distinctio voluptates sint! Itaque quasi corrupti, sequi quo odit
+            illum impedit!
+          </p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
 </div>
 {/* FAQ kısmı */}
 <div>
@@ -138,15 +256,15 @@ function Gecici() {
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="space-y-5 sm:text-center sm:max-w-md sm:mx-auto">
                     <h3 className="text-gray-800 text-3xl font-extrabold sm:text-4xl">
-                        How can we help?
+                        Size nasıl yardımcı olabiliriz?
                     </h3>
                     <p className="text-gray-600">
-                        Everything you need to know about the product. Can’t find the answer you’re looking for? feel free to {" "}
+                        Hala aradığınız cevabı bulamadınız mı? Bizimle {" "}
                         <a
                             className='text-indigo-600 font-semibold whitespace-nowrap'
                             href='javascript:void(0)'>
-                            contact us
-                        </a>.
+                            iletişime geçin.
+                        </a>
                     </p>
                     <form onSubmit={(e) => e.preventDefault()} className="mx-auto sm:max-w-xs">
                         <div className="relative">
@@ -155,7 +273,7 @@ function Gecici() {
                             </svg>
                             <input
                                 type="text"
-                                placeholder="Enter your email"
+                                placeholder="Mail adresinizi girin"
                                 className="w-full pl-12 pr-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                             />
                         </div>
@@ -177,7 +295,7 @@ function Gecici() {
                                     className='text-gray-600 leading-relaxed'>
                                 </p>
                                 <a href={item.href} className="flex items-center gap-x-1 text-sm text-indigo-600 hover:text-indigo-400 duration-150 font-medium">
-                                    Read more
+                                    Daha fazlası
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                                         <path fillRule="evenodd" d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z" clipRule="evenodd" />
                                     </svg>
